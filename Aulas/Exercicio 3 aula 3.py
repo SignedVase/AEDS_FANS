@@ -1,0 +1,7 @@
+n1 = int(input('Informe o numero 1: '))
+n2 = int(input('Informe o numero 2: '))
+n3 = int(input('Informe o numero 3: '))
+n4 = int(input('Informe o numero 4: '))
+n5 = int(input('Informe o numero 5: '))
+maior = max(n1, n2, n3, n4, n5)
+print(f'O maior numero é: {maior}')
