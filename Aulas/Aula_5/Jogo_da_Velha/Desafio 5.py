@@ -1,5 +1,6 @@
 from random import choice
 from time import sleep
+from Bot_Fácil import Facil
 
 def VencerH(li1):
     for a in range(3):
@@ -21,13 +22,7 @@ def VencerTrans2(li1):
         return True
     else:
         return False
-def Bot(li1):
-    for w in range(3):
-        for j in range(3):
-            if li1[w][j] == ' ':
-                vaz.append((w,j))
-    linha, coluna = choice(vaz)
-    return linha, coluna
+
 
 li1 = [[' ',' ',' '], [' ',' ',' '], [' ',' ',' ']]
 venc = ''
@@ -58,7 +53,7 @@ while not (opa or opb or opc or opd) and (' ' in li1[0] or ' ' in li1[1] or ' ' 
     if VencerTrans2(li1):
         venc = 'Ganhou'
         break
-    lin, col = Bot(li1)
+    lin, col = Facil(li1, vaz)
     li1[lin][col] = 'O'
     opa = VencerH(li1)
     opb = VencerV(li1)
